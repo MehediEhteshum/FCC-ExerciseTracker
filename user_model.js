@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
+let Schema = mongoose.Schema;
 
 // Exercise schema.
-let Schema = mongoose.Schema;
 let exerciseSchema = new Schema(
   {
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   description: { type: String, required: true },
   duration: { type: Number, required: true },
   date: { type: String }
@@ -15,4 +14,19 @@ let exerciseSchema = new Schema(
 // Exercise model.
 let Exercise = mongoose.model("Exercise", exerciseSchema);
 
-module.exports = Exercise;
+// User schema.
+let userSchema = new Schema(
+  {
+  username: { type: String, required: true },
+  log: [exerciseSchema]
+  },
+  { versionKey: false }
+);
+
+// User model.
+let User = mongoose.model("User", userSchema);
+
+module.exports = {
+    exercise: Exercise,
+    user: User
+};
