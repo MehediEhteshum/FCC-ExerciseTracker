@@ -4,7 +4,7 @@
 
 ### User Stories
 
-[![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-project-exercisetracker)](https://boilerplate-project-exercisetracker.mehediehteshum.repl.co)
+**Check the app here** >>  [![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-project-exercisetracker)](https://boilerplate-project-exercisetracker.mehediehteshum.repl.co)
 
 1. I can create a user by posting form data username to /api/exercise/new-user and returned will be an object with username and _id.
 2. I can get an array of all users by getting api/exercise/users with the same info as when creating a user.
